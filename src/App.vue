@@ -1,60 +1,41 @@
 <template>
+  <!-- App.vue -->
+
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-navigation-drawer app>
+      <!-- -->
+    </v-navigation-drawer>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+    <v-app-bar app>
+      <v-container>
+        <v-btn class="mx-2" fab dark color="teal">
+          <v-icon dark> mdi-format-list-bulleted-square </v-icon>
+        </v-btn>
+      </v-container>
+      <!-- -->
     </v-app-bar>
 
+    <!-- 根据应用组件来调整你的内容 -->
     <v-main>
-      <HelloWorld/>
+      <!-- 给应用提供合适的间距 -->
+      <v-container fluid>
+        <!-- 如果使用 vue-router -->
+        <router-view> </router-view>
+      </v-container>
     </v-main>
+
+    <v-footer app>
+      <!-- -->
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
-  data: () => ({
-    //
-  }),
+  data: () => ({}),
 };
 </script>
